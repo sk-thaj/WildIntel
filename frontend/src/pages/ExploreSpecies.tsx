@@ -20,7 +20,7 @@ export default function ExploreSpecies() {
   const ITEMS_PER_PAGE = 24;
 
   useEffect(() => {
-    fetch("http://127.0.0.1:5000/species")
+    fetch(`${import.meta.env.VITE_API_URL || "http://127.0.0.1:5000"}/species`)
       .then(res => res.json())
       .then(data => {
         setSpecies(data);
