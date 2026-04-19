@@ -1,0 +1,33 @@
+src/components/MapView.tsx(31,19): error TS2322: Type '{ children: (Element | Element[])[]; center: any; zoom: number; style: { height: string; }; }' is not assignable to type 'IntrinsicAttributes & MapContainerProps & RefAttributes<LeafletMap>'.
+  Property 'center' does not exist on type 'IntrinsicAttributes & MapContainerProps & RefAttributes<LeafletMap>'.
+src/components/NavLink.tsx(1,36): error TS1484: 'NavLinkProps' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/components/SpeciesCard.tsx(2,10): error TS1484: 'Species' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/components/SpeciesCard.tsx(18,26): error TS2339: Property 'image' does not exist on type 'Species'.
+src/components/SpeciesCard.tsx(29,109): error TS2554: Expected 0 arguments, but got 1.
+src/components/SpeciesCard.tsx(33,72): error TS2339: Property 'scientificName' does not exist on type 'Species'.
+src/components/SpeciesCard.tsx(34,78): error TS2339: Property 'description' does not exist on type 'Species'.
+src/components/SpeciesMap.tsx(25,27): error TS2694: Namespace '"leaflet"' has no exported member 'Map'.
+src/components/ui/select.tsx(1,1): error TS6133: 'React' is declared but its value is never read.
+src/components/ui/select.tsx(2,36): error TS6133: 'onValueChange' is declared but its value is never read.
+src/components/ui/select.tsx(2,51): error TS6133: 'defaultValue' is declared but its value is never read.
+src/components/ui/select.tsx(2,65): error TS6133: 'value' is declared but its value is never read.
+src/components/ui/sonner.tsx(2,1): error TS6133: 'React' is declared but its value is never read.
+src/components/ui/toaster.tsx(1,1): error TS6133: 'React' is declared but its value is never read.
+src/components/ui/tooltip.tsx(1,1): error TS6133: 'React' is declared but its value is never read.
+src/hooks/use-toast.ts(152,7): error TS2353: Object literal may only specify known properties, and 'open' does not exist in type 'ToasterToast'.
+src/pages/Dashboard.tsx(12,53): error TS2339: Property 'region' does not exist on type 'Species'.
+src/pages/Dashboard.tsx(14,32): error TS2339: Property 'region' does not exist on type 'Species'.
+src/pages/Dashboard.tsx(20,100): error TS2551: Property 'populationTrend' does not exist on type 'Species'. Did you mean 'population'?
+src/pages/Dashboard.tsx(21,89): error TS2551: Property 'populationTrend' does not exist on type 'Species'. Did you mean 'population'?
+src/pages/ExploreSpecies.tsx(9,48): error TS2339: Property 'region' does not exist on type 'Species'.
+src/pages/ExploreSpecies.tsx(10,46): error TS2339: Property 'type' does not exist on type 'Species'.
+src/pages/ExploreSpecies.tsx(20,80): error TS2339: Property 'scientificName' does not exist on type 'Species'.
+src/pages/ExploreSpecies.tsx(22,39): error TS2339: Property 'region' does not exist on type 'Species'.
+src/pages/ExploreSpecies.tsx(23,37): error TS2339: Property 'type' does not exist on type 'Species'.
+src/pages/index.tsx(7,19): error TS2305: Module '"@/data/mockData"' has no exported member 'alerts'.
+src/pages/SpeciesDetail.tsx(23,22): error TS2339: Property 'image' does not exist on type 'Species'.
+src/pages/SpeciesDetail.tsx(28,100): error TS2554: Expected 0 arguments, but got 1.
+src/pages/SpeciesDetail.tsx(30,61): error TS2339: Property 'scientificName' does not exist on type 'Species'.
+src/pages/SpeciesDetail.tsx(33,46): error TS2339: Property 'description' does not exist on type 'Species'.
+src/pages/SpeciesDetail.tsx(49,19): error TS2339: Property 'threats' does not exist on type 'Species'.
+src/pages/SpeciesDetail.tsx(63,35): error TS2551: Property 'populationTrend' does not exist on type 'Species'. Did you mean 'population'?

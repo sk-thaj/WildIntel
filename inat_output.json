@@ -1,0 +1,51 @@
+[
+  {
+    "originalName": "Amorphochilus schnablii",
+    "scientificName": "Amorphochilus schnablii",
+    "commonName": "Smoky Bat",
+    "image": "https://inaturalist-open-data.s3.amazonaws.com/photos/718309/medium.JPG",
+    "inatUrl": "https://www.inaturalist.org/taxa/41331"
+  },
+  {
+    "originalName": "Anthops ornatus",
+    "scientificName": "Anthops ornatus",
+    "commonName": "Flower-faced Bat",
+    "image": null,
+    "inatUrl": "https://www.inaturalist.org/taxa/40775"
+  },
+  {
+    "originalName": "Aproteles bulmerae",
+    "scientificName": "Aproteles bulmerae",
+    "commonName": "Bulmer's Fruit Bat",
+    "image": null,
+    "inatUrl": "https://www.inaturalist.org/taxa/40796"
+  },
+  {
+    "originalName": "Cephalophus spadix",
+    "scientificName": "Cephalophus spadix",
+    "commonName": "Abbott's Duiker",
+    "image": "https://static.inaturalist.org/photos/174102256/medium.jpeg",
+    "inatUrl": "https://www.inaturalist.org/taxa/42291"
+  },
+  {
+    "originalName": "Chaerephon tomensis",
+    "scientificName": "Mops tomensis",
+    "commonName": "São Tomé Free-tailed Bat",
+    "image": "https://inaturalist-open-data.s3.amazonaws.com/photos/490302/medium.gif",
+    "inatUrl": "https://www.inaturalist.org/taxa/1431341"
+  },
+  {
+    "originalName": "Cremnomys elvira",
+    "scientificName": "Cremnomys elvira",
+    "commonName": "Elvira Rat",
+    "image": null,
+    "inatUrl": "https://www.inaturalist.org/taxa/45619"
+  },
+  {
+    "originalName": "Crocidura raineyi",
+    "scientificName": "Crocidura raineyi",
+    "commonName": "Rainey shrew",
+    "image": null,
+    "inatUrl": "https://www.inaturalist.org/taxa/46704"
+  }
+]

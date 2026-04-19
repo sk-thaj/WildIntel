@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 80 20% 97%;
+    --foreground: 150 30% 10%;
+
+    --card: 80 15% 95%;
+    --card-foreground: 150 30% 10%;
+
+    --popover: 80 20% 97%;
+    --popover-foreground: 150 30% 10%;
+
+    --primary: 152 45% 28%;
+    --primary-foreground: 80 20% 97%;
+
+    --secondary: 36 40% 88%;
+    --secondary-foreground: 30 30% 20%;
+
+    --muted: 80 10% 92%;
+    --muted-foreground: 150 10% 40%;
+
+    --accent: 36 55% 55%;
+    --accent-foreground: 36 60% 12%;
+
+    --destructive: 0 72% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 80 15% 85%;
+    --input: 80 15% 85%;
+    --ring: 152 45% 28%;
+
+    --radius: 0.75rem;
+
+    --status-critical: 0 72% 50%;
+    --status-endangered: 25 90% 55%;
+    --status-vulnerable: 45 90% 50%;
+    --status-near-threatened: 152 45% 40%;
+
+    --sidebar-background: 150 20% 12%;
+    --sidebar-foreground: 80 20% 90%;
+    --sidebar-primary: 152 45% 45%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 150 20% 18%;
+    --sidebar-accent-foreground: 80 20% 90%;
+    --sidebar-border: 150 15% 22%;
+    --sidebar-ring: 152 45% 45%;
+
+    --font-display: 'Playfair Display', serif;
+    --font-body: 'Inter', sans-serif;
+  }
+
+  .dark {
+    --background: 150 20% 6%;
+    --foreground: 80 15% 92%;
+    --card: 150 20% 9%;
+    --card-foreground: 80 15% 92%;
+    --popover: 150 20% 9%;
+    --popover-foreground: 80 15% 92%;
+    --primary: 152 45% 40%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 36 20% 18%;
+    --secondary-foreground: 36 30% 85%;
+    --muted: 150 15% 15%;
+    --muted-foreground: 150 10% 55%;
+    --accent: 36 45% 45%;
+    --accent-foreground: 36 30% 90%;
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 150 15% 18%;
+    --input: 150 15% 18%;
+    --ring: 152 45% 40%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-body);
+  }
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+  }
+}
+
+@layer components {
+  .status-badge-critical {
+    @apply bg-[hsl(var(--status-critical))] text-white;
+  }
+  .status-badge-endangered {
+    @apply bg-[hsl(var(--status-endangered))] text-white;
+  }
+  .status-badge-vulnerable {
+    @apply bg-[hsl(var(--status-vulnerable))] text-foreground;
+  }
+  .status-badge-near-threatened {
+    @apply bg-[hsl(var(--status-near-threatened))] text-white;
+  }
+}
