@@ -6,6 +6,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Input } from "@/components/ui/input";
 import { Search } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { api } from "@/services/api";
 
 const statuses: ConservationStatus[] = ["Critically Endangered", "Endangered", "Vulnerable", "Near Threatened"];
 
@@ -20,10 +21,9 @@ export default function ExploreSpecies() {
   const ITEMS_PER_PAGE = 24;
 
   useEffect(() => {
-    fetch("http://127.0.0.1:5000/species")
-      .then(res => res.json())
-      .then(data => {
-        setSpecies(data);
+    api.get("/species")
+      .then(res => {
+        setSpecies(res.data);
         setLoading(false);
       })
       .catch(err => {

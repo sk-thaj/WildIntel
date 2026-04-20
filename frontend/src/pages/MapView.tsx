@@ -4,6 +4,8 @@ import { type ConservationStatus } from "@/data/mockData";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Input } from "@/components/ui/input";
 import { Search } from "lucide-react";
+import { api } from "@/services/api";
+
 
 export default function MapView() {
   const [species, setSpecies] = useState<any[]>([]);
@@ -14,10 +16,9 @@ export default function MapView() {
   const statuses: ConservationStatus[] = ["Critically Endangered", "Endangered", "Vulnerable", "Near Threatened"];
 
   useEffect(() => {
-    fetch("http://127.0.0.1:5000/species")
-      .then(res => res.json())
-      .then(data => {
-        setSpecies(data);
+    api.get("/species")
+      .then(res => {
+        setSpecies(res.data);
         setLoading(false);
       })
       .catch(err => {
