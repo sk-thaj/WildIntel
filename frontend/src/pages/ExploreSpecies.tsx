@@ -109,18 +109,18 @@ export default function ExploreSpecies() {
       <h1 className="font-display text-4xl font-bold mb-2">Explore Species</h1>
       <p className="text-muted-foreground mb-8">Browse and filter endangered species around the world</p>
 
-      <div className="flex flex-wrap gap-3 mb-8">
-        <div className="relative flex-1 min-w-[200px] lg:max-w-md">
+      <div className="flex flex-col sm:flex-row gap-3 mb-8">
+        <div className="relative w-full sm:flex-1 lg:max-w-md">
           <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
           <Input
             placeholder="Search scientific name..."
             value={search}
             onChange={e => { setSearch(e.target.value); setPage(1); }}
-            className="pl-10"
+            className="pl-10 w-full"
           />
         </div>
         <Select value={statusFilter} onValueChange={(val) => { setStatusFilter(val); setPage(1); }}>
-          <SelectTrigger className="w-[200px]"><SelectValue placeholder="Status" /></SelectTrigger>
+          <SelectTrigger className="w-full sm:w-[200px]"><SelectValue placeholder="Status" /></SelectTrigger>
           <SelectContent>
             <SelectItem value="all">All Statuses</SelectItem>
             {statuses.map(s => <SelectItem key={s} value={s}>{s}</SelectItem>)}

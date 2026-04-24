@@ -385,7 +385,7 @@ export default function SpeciesCard({ species, index = 0, prefetchedData }: { sp
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: (index % 24) * 0.05, duration: 0.4 }}
     >
-      <div className="group block overflow-hidden rounded-lg bg-card border shadow-sm hover:shadow-lg transition-all duration-300 cursor-pointer">
+      <Link to={`/species/${species.id}`} className="group block overflow-hidden rounded-lg bg-card border shadow-sm hover:shadow-lg transition-all duration-300">
         <div className="aspect-[4/3] overflow-hidden relative bg-muted flex flex-col items-center justify-center">
           {loading ? (
             <Skeleton className="w-full h-full absolute inset-0" />
@@ -411,14 +411,15 @@ export default function SpeciesCard({ species, index = 0, prefetchedData }: { sp
               )}
               {wikiData.sourceUrl && (
                 <div
-                  className="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                  className="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10"
                   onClick={(e) => {
+                    e.preventDefault();
                     e.stopPropagation();
                     window.open(wikiData.sourceUrl!, '_blank');
                   }}
                 >
                   <span className="bg-primary hover:bg-primary/90 text-primary-foreground px-4 py-2 rounded-full text-sm font-semibold transform translate-y-4 group-hover:translate-y-0 transition-all duration-300 flex items-center gap-2">
-                    View More
+                    Wiki Source
                     <Leaf className="w-4 h-4" />
                   </span>
                 </div>
@@ -434,7 +435,7 @@ export default function SpeciesCard({ species, index = 0, prefetchedData }: { sp
             <div className="flex items-center gap-2">
               <button
                 onClick={(e) => { e.preventDefault(); e.stopPropagation(); setIsReportModalOpen(true); }}
-                className="text-muted-foreground hover:text-red-500 transition-colors bg-secondary p-1 rounded-full flex-shrink-0"
+                className="text-muted-foreground hover:text-red-500 transition-colors bg-secondary p-1 rounded-full flex-shrink-0 z-20"
                 title="Report Issue"
               >
                 <Flag className="w-3 h-3" />
@@ -457,7 +458,7 @@ export default function SpeciesCard({ species, index = 0, prefetchedData }: { sp
             )}
           </div>
         </div>
-      </div>
+      </Link>
       <ReportIssueModal
         isOpen={isReportModalOpen}
         onClose={() => setIsReportModalOpen(false)}
